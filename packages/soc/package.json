@@ -1,0 +1,28 @@
+{
+  "name": "separation-layer",
+  "version": "1.0.0",
+  "description": "Separation of concern - (example - view layer / logic layer)",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "separation of concern",
+    "view layer",
+    "logic layer"
+  ],
+  "author": "G@ur@v M@ll",
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "find-my-way": "^7.3.1",
+    "http": "^0.0.1-security",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

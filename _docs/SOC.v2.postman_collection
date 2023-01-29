@@ -1,0 +1,58 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SOC",
+		"_postman_id": "d644fd74-8f98-9691-8491-043d59b7c689",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/processReactMarkup",
+			"request": {
+				"url": "http://localhost:3000/processReactMarkup",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"description": "",
+							"type": "file",
+							"src": "main.fc03aad1.js"
+						},
+						{
+							"key": "metaData",
+							"value": "{\"title\": \"Title of the page\",\"other\":5,\"keywords\":\"keyword1, mykeyword2, yourkeyword, hiskeyword\"}",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "processing markup request for generating a React SSR markup.\n\nPass react code & metaData for server processing"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/processConfiguration",
+			"request": {
+				"url": "http://localhost:3000/processConfiguration",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"baseAPI\": \"/apiURL\",\n\t\"client\": \"clientA\",\n\t\"token\": \"RANDOM_TOKEN_123\"\n}"
+				},
+				"description": "Process config generation of an authenticated request "
+			},
+			"response": []
+		}
+	]
+}
