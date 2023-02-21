@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "set \"DISABLE_ESLINT_PLUGIN=true\" && set \"PORT=3001\" && react-scripts start",
-    "build": "set \"GENERATE_SOURCEMAP=false\" && set \"DISABLE_ESLINT_PLUGIN=true\" && react-scripts build"
+    "build": "set \"BUILD_PATH='../../../ssr/dist\" && set \"DISABLE_ESLINT_PLUGIN=true\" && react-scripts build"
   },
   "eslintConfig": {
     "extends": [

@@ -27,7 +27,7 @@ module.exports = {
 			vm.runInContext(code, context)
 			/** Below line shows the code pass as a request */
 			// res.end(JSON.stringify({ data: code}))
-			
+
 			/** Below line shows the rendered version of the code passed */
 			res.end(JSON.stringify({status:"success", data: context.__rendered, metaData: request.metaData}))
 		} else {

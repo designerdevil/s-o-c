@@ -9,16 +9,27 @@ export default function App() {
   return (
     <>
       <h1>Hello, LMT!</h1>
-      <Counter />
+      <MarkupContent />
     </>
   );
 }
 
-function Counter() {
-  const [count, setCount] = React.useState(0);
+const defaultTableData = [
+  { employeeId: 1, employeeName: 'Gaurav' },
+  { employeeId: 2, employeeName: 'Sanjay' },
+  { employeeId: 3, employeeName: 'Vijay' },
+  { employeeId: 4, employeeName: 'Rajeev' },
+  { employeeId: 5, employeeName: 'Nikhil' },
+]
+
+function MarkupContent() {
+  const [tableData, setTableData] = React.useState(defaultTableData);
   return (
-    <button onClick={() => setCount(count + 1)}>
-      You clicked me {count} times.
-    </button>
+    <table>
+    <thead><tr><th>Employee Id</th><th>Employee Name</th></tr></thead>
+    <tbody>
+    {tableData.map(({employeeId, employeeName}) => (<tr><td>{employeeId}</td><td>{employeeName}</td></tr>))}
+    </tbody>
+    </table>
   );
 }
