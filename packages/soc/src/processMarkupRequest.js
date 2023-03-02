@@ -17,7 +17,7 @@ module.exports = {
 				TextEncoder: TextEncoder,
 				console: console,
 				isServerSide: true,
-				__rendered: "",
+				__rendered: "_",
 				document: undefined,
 			}
 			
